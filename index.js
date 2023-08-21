@@ -31,7 +31,7 @@ module.exports = class nowPlayingPlugin {
         console.log('The artist has been saved!');
         writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName);
         console.log('The album has been saved!');
-        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attattributes.artistName}`);
+        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attributes.artistName}`);
         console.log('The all has been saved!');
 
         https.get(artworkURL, (res) => {
@@ -58,7 +58,7 @@ module.exports = class nowPlayingPlugin {
         console.log('The artist has been saved!');
         writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName);
         console.log('The album has been saved!');
-        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attattributes.artistName}`);
+        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attributes.artistName}`);
         console.log('The all has been saved!');
 
         https.get(artworkURL, (res) => {
