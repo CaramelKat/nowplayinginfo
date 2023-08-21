@@ -25,12 +25,14 @@ module.exports = class nowPlayingPlugin {
             mkdirSync(`${this.env.dir}/dist`);
         }
         let artworkURL = attributes.artwork.url.replace('{h}', attributes.artwork.height).replace('{w}', attributes.artwork.width);
-        writeFileSync(`${this.env.dir}/dist/title.txt`, attributes.name)
-        console.log('The title has been saved!')
-        writeFileSync(`${this.env.dir}/dist/artist.txt`, attributes.artistName)
-        console.log('The artist has been saved!')
-        writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName)
-        console.log('The album has been saved!')
+        writeFileSync(`${this.env.dir}/dist/title.txt`, attributes.name);
+        console.log('The title has been saved!');
+        writeFileSync(`${this.env.dir}/dist/artist.txt`, attributes.artistName);
+        console.log('The artist has been saved!');
+        writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName);
+        console.log('The album has been saved!');
+        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attattributes.artistName}`);
+        console.log('The all has been saved!');
 
         https.get(artworkURL, (res) => {
             writeFileSync(`${this.env.dir}/dist/artwork.jpg`, "")
@@ -50,12 +52,14 @@ module.exports = class nowPlayingPlugin {
             mkdirSync(`${this.env.dir}/dist`);
         }
         let artworkURL = attributes.artwork.url.replace('{h}', attributes.artwork.height).replace('{w}', attributes.artwork.width);
-        writeFileSync(`${this.env.dir}/dist/title.txt`, attributes.name)
-        console.log('The title has been saved!')
-        writeFileSync(`${this.env.dir}/dist/artist.txt`, attributes.artistName)
-        console.log('The artist has been saved!')
-        writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName)
-        console.log('The album has been saved!')
+        writeFileSync(`${this.env.dir}/dist/title.txt`, attributes.name);
+        console.log('The title has been saved!');
+        writeFileSync(`${this.env.dir}/dist/artist.txt`, attributes.artistName);
+        console.log('The artist has been saved!');
+        writeFileSync(`${this.env.dir}/dist/album.txt`, attributes.albumName);
+        console.log('The album has been saved!');
+        writeFileSync(`${this.env.dir}/dist/all.txt`, `"${attributes.name}" by ${attattributes.artistName}`);
+        console.log('The all has been saved!');
 
         https.get(artworkURL, (res) => {
             writeFileSync(`${this.env.dir}/dist/artwork.jpg`, "")
@@ -71,9 +75,10 @@ module.exports = class nowPlayingPlugin {
         });
     }
     onBeforeQuit() {
-        writeFileSync(`${this.env.dir}/dist/title.txt`, "")
-        writeFileSync(`${this.env.dir}/dist/artist.txt`, "")
-        writeFileSync(`${this.env.dir}/dist/album.txt`, "")
-        writeFileSync(`${this.env.dir}/dist/artwork.jpg`, "")
+        writeFileSync(`${this.env.dir}/dist/title.txt`, "");
+        writeFileSync(`${this.env.dir}/dist/artist.txt`, "");
+        writeFileSync(`${this.env.dir}/dist/album.txt`, "");
+        writeFileSync(`${this.env.dir}/dist/all.txt`, "");
+        writeFileSync(`${this.env.dir}/dist/artwork.jpg`, "");
     }
 }
